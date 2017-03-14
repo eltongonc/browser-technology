@@ -32,7 +32,6 @@ After receiving the assignment I went to [Awwwards.com](www.awwwards.com) to bro
 ![Protest sportswear](https://eltongonc.github.io/browser-technology/screenshots/protest_no-img.png)
 
  **Nothing will be rendered!**
-
  The site waits on sections to be done loading to load another section. I assume it waits until one image is done loading to load another. The home page is a very important page. By having this display as an empty screen you will scare away your viewers.
 
  **Solution: Consider an alternative homepage or remove the fancy onloadsucces images**
