@@ -20,7 +20,7 @@ Your site might not work if one or more of these features are not present or eve
 - No permission for Cookies (disabling cookies).
 - No mouse or trackpad.
 
-What i wanted to figure out was <b>What would happen if you disabled images and cookies permission for three days<b>.
+What i wanted to figure out was **What would happen if you disabled images and cookies permission for three days**.
 
 ### First site
 After receiving the assignment I went to [Awwwards.com](www.awwwards.com) to browser award wining sites. I soon came across [Protest sportswear](https://www.protest.eu/nl/) which is nominated for site of the year in December 2016. Well lets see some difference:
