@@ -23,20 +23,22 @@ Your site might not work if one or more of these features are not present or eve
 What i wanted to figure out was <b>What would happen if you disabled images and cookies permission for three days<b>.
 
 ### First site
-After receiving the assignment I went to [Awwwards.com](www.awwwards.com) to browser award wining sites. I soon came across [Protest sportswear](https://www.protest.eu/nl/) which is nominated for site of the year in december 2016. Well lets see some difference:
+After receiving the assignment I went to [Awwwards.com](www.awwwards.com) to browser award wining sites. I soon came across [Protest sportswear](https://www.protest.eu/nl/) which is nominated for site of the year in December 2016. Well lets see some difference:
 
-###### Images enabled
+**Images enabled**
 ![Protest sportswear](https://eltongonc.github.io/browser-technology/screenshots/protest_imgs.png)
 
-###### Images disabled
+**Images disabled**
 ![Protest sportswear](https://eltongonc.github.io/browser-technology/screenshots/protest_no-img.png)
 
- Nothing will be rendered!
+ **Nothing will be rendered!**
 
  The site waits on sections to be done loading to load another section. I assume it waits until one image is done loading to load another. The home page is a very important page. By having this display as an empty screen you will scare away your viewers.
 
- `Solution: Alternative homepage`
+ **Solution: Alternative homepage**
 
 
 ### Second site
-While type this file I wanted to make a repo to store it in at [Github](github.com), well guess what this file will never be available because ![Github requires cookies](https://eltongonc.github.io/browser-technology/screenshots/github_no-cookies.png)
+While type this file I wanted to make a repo to store it in at [Github](github.com), well guess what this file will never be available because
+
+![Github requires cookies](https://eltongonc.github.io/browser-technology/screenshots/github_no-cookies.png)
