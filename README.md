@@ -35,10 +35,24 @@ After receiving the assignment I went to [Awwwards.com](www.awwwards.com) to bro
 
  The site waits on sections to be done loading to load another section. I assume it waits until one image is done loading to load another. The home page is a very important page. By having this display as an empty screen you will scare away your viewers.
 
- **Solution: Alternative homepage**
+ **Solution: Consider an alternative homepage or remove the fancy onloadsucces images**
 
 
 ### Second site
 While type this file I wanted to make a repo to store it in at [Github](github.com), well guess what this file will never be available because
 
 ![Github requires cookies](https://eltongonc.github.io/browser-technology/screenshots/github_no-cookies.png)
+
+Gitub uses the cookie to check an user session or store the session of an user. Again this is an assumption.
+
+**Solution: I am not sure if cookies are needed for every login, but give the user a option to save the session**
+
+### Third site
+The journey continues.
+Well apparently disabling cookies and images is a great combination. My school site does not let me in without cookies and appears as if it was a regular bootstrap site.
+
+![CMD Moodle](https://eltongonc.github.io/browser-technology/screenshots/moodle.png)
+
+These site has no logo or no title to indicate what the site is and who it is for.
+
+**Solution: Set a logo or an alt attribute to your logo so people can tell if it's your site. And also same as the second site, give the user a option to save the session.**
