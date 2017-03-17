@@ -22,7 +22,7 @@ Your site might not work if one or more of these features are not present or eve
 
 What i wanted to figure out was **What would happen if you disabled images and cookies permission for three days**.
 
-### First site
+### First site: Protest sportswear
 After receiving the assignment I went to [Awwwards.com](www.awwwards.com) to browser award wining sites. I soon came across [Protest sportswear](https://www.protest.eu/nl/) which is nominated for site of the year in December 2016. Well lets see some difference:
 
 **Images enabled**
@@ -37,22 +37,22 @@ The site waits on sections to be done loading to load another section. I assume 
 
 **Solution: Consider an alternative homepage or remove the fancy onloadsucces images**
 
-### Second site
-While type this file I wanted to make a repo to store it in at [Github](github.com), well guess what this file will never be available because
+### Second site: Github
+While typing this file I wanted to make a repository to store it in at [Github](github.com), well guess what this file will never be available because
 
 ![Github requires cookies](https://eltongonc.github.io/browser-technology/screenshots/github_no-cookies.png)
 
 Gitub uses the cookie to check an user session or store the session of an user. Again this is an assumption.
 
-**Solution: I am not sure if cookies are needed for every login, but give the user a option to save the session**
+**Solution: I am not sure if cookies are needed for every login, but give the user the choice wether he/she want to use cookies for a session**
 
-### Third site
+### Third site: Moodle
 The journey continues.
 Well apparently disabling cookies and images is a great combination. My school site does not let me in without cookies and appears as if it was a regular bootstrap site.
+This site lacks a logo or no title to indicate what the site is and who it is for.
 
 ![CMD Moodle](https://eltongonc.github.io/browser-technology/screenshots/moodle.png)
 
-These site has no logo or no title to indicate what the site is and who it is for.
 
 **Solution: Set a logo or an alt attribute to your logo so people can tell if it's your site. And also same as the second site, give the user a option to save the session**
 
@@ -64,7 +64,7 @@ Let's put my week old Fundaa prototype to a test.
 #### Pro's
 - Every image has an alt tag, so if you can't see the image at least you read what it is.
 - Because of the Funda styleguide there are no issues for colorblindness.
-
+- The screenreader does not have trouble going through the content. The only issue that occurs: my screenreader is english, but the content is in dutch.
 
 #### Con's
 - You can't navigate through the app without localStorage.
