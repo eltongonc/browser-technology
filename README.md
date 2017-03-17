@@ -55,3 +55,29 @@ Well apparently disabling cookies and images is a great combination. My school s
 These site has no logo or no title to indicate what the site is and who it is for.
 
 **Solution: Set a logo or an alt attribute to your logo so people can tell if it's your site. And also same as the second site, give the user a option to save the session**
+
+
+### My own Funda prototype
+Let's put my week old Fundaa prototype to a test.
+![Github requires cookies](https://eltongonc.github.io/browser-technology/screenshots/funda.png)
+
+#### Pro's
+- Every image has an alt tag, so if you can't see the image at least you read what it is.
+- Because of the Funda styleguide there are no issues for colorblindness.
+
+
+#### Con's
+- You can't navigate through the app without localStorage.
+- No feedback to the user why the app broke.
+- API response time is to low on slower connection.
+- The map features is very absent if you do not give permission to use the users location.
+
+#### TO-DO
+- Give the user more information on the alt text [styling broken images](https://bitsofco.de/styling-broken-images/)
+- Loading speed can be faster
+- Reduce the requests done.
+- Apply a lazyload feature that shows a few images at a time.
+- Fallback for the map.
+- Better focus states.
+- HTML page fallback.
+- Progressive enhancement in redirection and interactivity [Progressive enhancement](https://www.christianheilmann.com/2015/02/18/progressive-enhancement-is-not-about-javascript-availability/#)
