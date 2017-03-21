@@ -4,4 +4,4 @@
 
 ## Week 2 Feature detection
 
-- [Scroll snapp Propperties](https://eltongonc.github.io/browser-technology/feature_detection/demo1)
+- [Scroll snapp Propperties](https://github.com/eltongonc/browser-technology/feature_detection/demo1)

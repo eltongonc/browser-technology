@@ -15,4 +15,5 @@ This is a features that is not well supported by allot of browsers. Most browser
 ### Live demo
 I made an example that will show the snapping in action on the browsers that support. If the browser doesn't support it the sections will be expanded.
 
+View the difference on Firefox and Chrome
 [Link to the example](https://eltongonc.github.io/browser-technology/feature_detection/demo1)

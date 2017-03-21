@@ -40,6 +40,17 @@ section article ul {
     max-width: 42em;
     margin: auto;
 }
+section article.small {
+    padding: 20em auto;
+}
+
+section article.medium {
+    padding: 60em auto;
+}
+
+section article.large {
+    padding: 100em auto;
+}
 
 nav {
     position: absolute;
