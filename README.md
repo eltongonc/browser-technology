@@ -13,3 +13,4 @@
 
 **JS**
 - [JS Drag and drog](https://github.com/eltongonc/browser-technology/tree/master/feature_detection/drag-and-drop)
+- [Font loading](https://github.com/eltongonc/browser-technology/tree/master/feature_detection/font-loading)

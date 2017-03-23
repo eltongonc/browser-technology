@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Font loading </title>
+	<style>
+		body{
+			padding: 2em 4em;
+			color: #333;
+			background-color: #DEDEDE;
+		}
+
+		section {
+			border: solid  white;
+			padding: 4em;
+			display: flex;
+			flex-wrap: wrap;
+		}
+		section h3 {
+			min-width: 100%;
+		}
+
+		p {
+			font-size: 1.3em;
+			line-height: 1.5em;
+			min-width: 10em;
+			max-width: 32em;
+			cursor: grabbing;
+			filter: drop-shadow(.1em .1em  #dedede );
+			margin-right: 0.5em
+		}
+
+		footer {
+			padding: 4em;
+			background-color:;
+		}
+
+		a {
+			text-decoration: none;
+			color: rgba(193, 74, 69, 0.72);
+		}
+
+		.loaded-body-font {
+			font-family: 'Raleway';
+		}
+		.loaded-header-font {
+			font-family: 'Baloo Bhaina';
+		}
+
+		article {
+			font-family: Helvetica, sans-serif;
+		}
+	</style>
+</head>
+
+<body>
+
+	<article>
+		<h1>Font loading API <small>(Loading fonts via Javascript)</small></h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</article>
+	<script>
+		if(document.fonts) {
+			const raleway = new FontFace('Raleway', 'url(https://fonts.gstatic.com/s/raleway/v11/QAUlVt1jXOgQavlW5wEfxQLUuEpTyoUstqEm5AMlJo4.woff2)');
+			const baloo = new FontFace('Baloo Bhaina', 'url(https://fonts.gstatic.com/s/baloobhaina/v1/HxxbxOVf9WQem_hKo1MXShampu5_7CjHW5spxoeN3Vs.woff2)');
+
+			document.fonts.add(raleway);
+			document.fonts.add(baloo);
+
+			raleway.load();
+			baloo.load();
+
+			raleway.loaded.then((fontFace) => {
+				document.querySelector('article').classList.add('loaded-body-font');
+			}, (fontFace) => {
+				console.error('Current status', raleway.status);
+			});
+
+			baloo.loaded.then((fontFace) => {
+				document.querySelector('h1').classList.add('loaded-header-font');
+			}, (fontFace) => {
+				console.error('Current status', raleway.status);
+			});
+		}
+	</script>
+</body>
+</html>
