@@ -44,6 +44,7 @@ I made an example that will show the snapping in action on the browsers that sup
 View the difference on Firefox and Chrome
 [Link to the example](https://eltongonc.github.io/browser-technology/feature_detection/drag-and-drop)
 
+***
 ### Sources
 
 - Idea from Chanel Mepschen;

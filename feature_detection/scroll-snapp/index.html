@@ -6,11 +6,104 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Scroll snap </title>
-	<link rel="stylesheet" href="style.css">
+	<style>
+		body {
+		    margin: 0;
+		    padding: 0;
+		    box-sizing: border-box;
+		    font-family: sans-serif;
+		}
+		/*SCROLL SNAP STYLES*/
+		section {
+		    height: 100vh;
+		    width: 100vw;
+		    overflow-y: auto;
+		    -webkit-scroll-snap-type: mandatory;
+		    -ms-scroll-snap-type: mandatory;
+		    scroll-snap-type: mandatory;
+		    scroll-behavior: smooth;
+		    scroll-snap-destination: 0% 0%;
+		}
+
+		section article {
+		    position: relative;
+		    background: #F0F0F0;
+		    overflow: hidden;
+		    width: 100%;
+		    height: auto;
+		    padding: 1em;
+		    border-bottom: solid 1px #ccc;
+		    -webkit-scroll-snap-coordinate: 0% 0%;
+		    -ms-scroll-snap-coordinate: 0% 0%;
+		    scroll-snap-coordinate: 0% 0%;
+		}
+
+		section article h1,
+		section article h2,
+		section article h3,
+		section article h4,
+		section article h5,
+		section article h6,
+		section article p,
+		section article ul {
+		    max-width: 42em;
+		    margin: auto;
+		}
+		section article.small {
+		    padding: 20em auto;
+		}
+
+		section article.medium {
+		    padding: 60em auto;
+		}
+
+		section article.large {
+		    padding: 100em auto;
+		}
+
+		nav {
+		    position: absolute;
+		    top: 25%;
+		    left: 0px;
+		    background: #eee;
+		    z-index: 5;
+		}
+
+		nav ul {
+		    margin: 0px;
+		    padding: 0px;
+		}
+
+		nav li {
+		    display: block;
+		    margin: 0px;
+		}
+
+		nav li a {
+		    display: block;
+		    background: #efefef;
+		    border: solid 1px #ccc;
+		    border-top: 0px;
+		    padding: 15px 30px;
+		    height: auto;
+		    color: #333;
+		    text-decoration: none;
+		}
+
+		nav li:first-child a {
+		    border-top: solid 1px #ccc;
+		}
+
+		nav li a:active,
+		nav li a:hover {
+		    background: #CCC;
+		}
+
+	</style>
 </head>
 
 <body>
-    <!-- Based on https://codepen.io/SitePoint/pen/EPapXK/ -->
+    
 	<main class="main">
 
 		<section>
