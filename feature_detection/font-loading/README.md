@@ -31,7 +31,7 @@ This is a features is supported by most browsers. It is not supported by Opera m
 |Not supported          |Fully supported            |Not supported|
 
 ### Live demo
-[Link to the example](https://eltongonc.github.io/browser-technology/feature_detection/drag-and-drop)
+[Link to the example](https://eltongonc.github.io/browser-technology/feature_detection/font-loading)
 
 ***
 
