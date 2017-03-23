@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Detail element </title>
+	<title>Drag and drop </title>
 	<style>
 			body{
 				padding: 2em 4em;
@@ -28,7 +28,7 @@
 				padding: 1em;
 				font-size: 1.3em;
 				line-height: 1.5em;
-				width: 12em;
+				min-width: 10em;
 				cursor: grabbing;
 				background: rgba(193, 74, 69, 0.72);
 				filter: drop-shadow(.1em .1em  #dedede );
@@ -121,9 +121,7 @@
 		        e.dataTransfer.dropEffect = "move";
 			});
 		    item.addEventListener("touchmove", function(e){
-		        e.preventDefault();
-		        // Set the dropEffect to move. I am not sure what it does. I think it changes the cursor
-		        e.dataTransfer.dropEffect = "move";
+
 			});
 		    item.addEventListener("drop", function(e){
 		        e.preventDefault();
