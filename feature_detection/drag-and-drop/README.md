@@ -1,6 +1,6 @@
-# Scroll snapp Propperties
+# HTML5 Detail tag
 
-This CSS feature lets the developer manipulate the way the page or content scrolls. This is useful for carrousels and other image view components.
+This html tag allows users to hide additionan information in a toggable section.
 
 ### Fallback
 If the browser does not support the CSS feature the page or content will scroll normal
@@ -16,4 +16,4 @@ This is a features that is not well supported by allot of browsers. Most browser
 I made an example that will show the snapping in action on the browsers that support. If the browser doesn't support it the sections will be expanded.
 
 View the difference on Firefox and Chrome
-[Link to the example](https://eltongonc.github.io/browser-technology/feature_detection/demo1)
+[Link to the example](https://eltongonc.github.io/browser-technology/feature_detection/detail-tag)
