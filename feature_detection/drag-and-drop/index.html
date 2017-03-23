@@ -94,23 +94,6 @@
 				}
 
 		    });
-		    p.addEventListener("touchstart",function(e){
-		        e.dataTransfer.setData("text/html", e.target.id);
-		        e.dataTransfer.setData("text/plain", e.target.id);
-
-				// Give the user feedback
-				if (user.origin.children.length !== 3) {
-					user.origin.innerHTML = "Drop it here"
-				}else  {
-					user.origin.innerHTML = ""
-				}
-				if (user.destination.children.length !== 3) {
-					user.destination.innerHTML = "or drop it here"
-				}else  {
-					user.destination.innerHTML = ""
-				}
-
-		    });
 
 		});
 		// The actions for the dropzone of the dragable item
@@ -120,31 +103,8 @@
 		        // Set the dropEffect to move. I am not sure what it does. I think it changes the cursor
 		        e.dataTransfer.dropEffect = "move";
 			});
-		    item.addEventListener("touchmove", function(e){
 
-			});
 		    item.addEventListener("drop", function(e){
-		        e.preventDefault();
-		        // Get the id of the target and add the moved element to the target's DOM
-		        var data = e.dataTransfer.getData("text");
-		        this.appendChild(document.getElementById(data));
-
-				// Give the user feedback
-				user.destination.innerHTML = "Drag some more items"
-				user.origin.innerHTML = ""
-				if (user.dropZones[1].children.length == 1) {
-					user.destination.innerHTML = ""
-				}
-				if (user.dropZones[1].children.length == 4) {
-					user.destination.innerHTML = ""
-					user.origin.innerHTML = "Now put them back"
-				}
-				if (user.dropZones[0].children.length == 4) {
-					user.destination.innerHTML = ""
-					user.origin.innerHTML = "Good job"
-				}
-		    });
-		    item.addEventListener("touchcancel", function(e){
 		        e.preventDefault();
 		        // Get the id of the target and add the moved element to the target's DOM
 		        var data = e.dataTransfer.getData("text");

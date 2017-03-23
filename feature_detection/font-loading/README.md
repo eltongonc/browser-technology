@@ -33,6 +33,8 @@ This is a features is supported by most browsers. It is not supported by Opera m
 ### Live demo
 [Link to the example](https://eltongonc.github.io/browser-technology/feature_detection/drag-and-drop)
 
+***
+
 ### Sources
 
 - [Article on Medium about Font loading - 4 min read](https://medium.com/@matuzo/getting-started-with-css-font-loading-e24e7ffaa791#.m7n35ysx7)
