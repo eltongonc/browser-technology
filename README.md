@@ -12,3 +12,4 @@
 - [HTML5 Detail tag](https://github.com/eltongonc/browser-technology/tree/master/feature_detection/detail-tag)
 
 **JS**
+- [HTML5 Detail tag](https://github.com/eltongonc/browser-technology/tree/master/feature_detection/drag-and-drop)

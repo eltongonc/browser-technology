@@ -7,292 +7,123 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Detail element </title>
 	<style>
-		body{
-			padding: 2em 4em;
-			font-family: sans-serif;
-			color: #333;
-			background-color: #DEDEDE;
-		}
-		article{
-			max-width: min-content;
-		}
-		figure {
-			width: 50vw;
-		}
-		img {
-			width: 100%;
-		}
+			body{
+				padding: 2em 4em;
+				font-family: sans-serif;
+				color: #333;
+				background-color: #DEDEDE;
+			}
 
-		summary {
-			padding: 1em;
-			outline: 0;
-			transition: 0.3s;
-		}
-		summary:focus,
-		summary:hover {
-			background-color: rgba(193, 74, 69, 0.72);
-		}
+			section {
+				border: solid  white;
+				padding: 4em;
+				display: flex;
+				flex-wrap: wrap;
+			}
+			section h3 {
+				min-width: 100%;
+			}
 
-		section {
-			border: solid  white;
-			padding: 4em;
-		}
-		section p {
-			padding: 1em;
-			font-size: 1.3em;
-			line-height: 1.5em;
-		}
-
-		h1 small, figcaption {
-			color: #999;
-		}
-
-		footer {
-			padding: 4em;
-			background-color: #333;
-			text-decoration: none;
-			color :white;
-		}
-		a {
-			text-decoration: none;
-			color: rgba(193, 74, 69, 0.72);
-		}
+			p {
+				padding: 1em;
+				font-size: 1.3em;
+				line-height: 1.5em;
+				width: 12em;
+				cursor: grabbing;
+				background: rgba(193, 74, 69, 0.72);
+				filter: drop-shadow(.1em .1em  #dedede );
+				margin-right: 0.5em
+			}
 
 
+			footer {
+				padding: 4em;
+				background-color:;
+
+			}
+
+			a {
+				text-decoration: none;
+				color: rgba(193, 74, 69, 0.72);
+			}
 
 
 	</style>
 </head>
 
 <body>
-	<article>
-		<header>
-			<h1>Naruto Story, Every Canon Anime Arc Detailed, Naruto Shippuden, No Fillers Included. <small>Outdated</small></h1>
-		</header>
 
-		<section>
-			<h2>Prologue and The Land of Waves</h2>
-			<figure>
-				<img src="http://www.wtfgamersonly.com/wp-content/uploads/2015/02/Rookie9.png" alt="Rookie9">
-				<figcaption>
-					Meet your future favorite anime characters.
-				</figcaption>
-			</figure>
-			<details>
-				<summary>
-					Episodes 1-19
-				</summary>
-				<p>The first ever story arc for Naruto. We meet all the young ninja and are introduced to Team 7, kakashi, Sasuke, Sakura, and Naruto. Team 7’s first mission brings them to the Land of Waves and quickly becomes dangerous. The famous battle against Zabuza and Haku showed just a taste of what was to come.</p>
-			</details>
+	<aside>
+		<section class="drop-zone origin">
+			<h3>Grab one of these items below</h3>
+			<p id="Balkon" draggable="true">Balkon</p>
+			<p id="Dakterras" draggable="true">Dakterras</p>
+			<p id="Tuin" draggable="true">Tuin</p>
 		</section>
+	</aside>
+	<section class="drop-zone destination">
+		<h3>and drop them here</h3>
+	</section>
 
-		<section>
+	<script>
+		let user = {
+		    dragElements : document.querySelectorAll('aside p'),
+		    dropZones : document.querySelectorAll('.drop-zone'),
+			origin : document.querySelector('.origin h3'),
+			destination : document.querySelector('.destination h3')
+		};
 
-			<h2>The Chūnin Exams</h2>
-			<details>
-				<summary>
-					Episodes 20-67
-				</summary>
-				<p>Team 7 signs up for the Chunin Exams! This arc introduced more in depth background stories of characters like Neji and Hinata, as well as introducing Orochimaru and Kabuto.</p>
-			</details>
-		</section>
-		<section>
-			<h2>Konoha Crush</h2>
+		// allow the elements to be dragable
+		user.dragElements.forEach(function(p){
+		    p.addEventListener("dragstart",function(e){
+		        e.dataTransfer.setData("text/html", e.target.id);
+		        e.dataTransfer.setData("text/plain", e.target.id);
 
-			<details>
-				<summary>
-					Episodes 68-80
-				</summary>
-				<p>Orochimaru’s plan to crush The Hidden Leaf goes in to action and causes a small war.</p>
-			</details>
-		</section>
-		<section>
-			<h2>Search for Tsunade</h2>
-			<figure>
-				<img src="http://www.wtfgamersonly.com/wp-content/uploads/2015/02/Ep112shikamaru.png" alt="Ep112shikamaru">
-				<figcaption>
-					The chase after Sasuke gets desperate.
-				</figcaption>
-			</figure>
-			<details>
-				<summary>
-					Episodes 81-100
-				</summary>
-				<p>The introduction to the Legendary Sanin. After the Konoha Crush the Hidden Leaf needs a new Hokage. Naruto heads out with Jiraiya in search of Tsunade in hopes that she’ll take the position and help the Leaf recover.</p>
-			</details>
-		</section>
+				// Give the user feedback
+				if (user.origin.children.length !== 3) {
+					user.origin.innerHTML = "Drop it here"
+				}else  {
+					user.origin.innerHTML = ""
+				}
+				if (user.destination.children.length !== 3) {
+					user.destination.innerHTML = "or drop it here"
+				}else  {
+					user.destination.innerHTML = ""
+				}
 
-		<section>
-			<h2>Sasuke Recovery Mission</h2>
-			<details>
-				<summary>
-					Episodes 107-135
-				</summary>
-				<p>Naruto and several Konaha Ninja take on the mission of going after Sasuke. It’s an all out chase after him involving almost all of the youth that grew up with him. Lee’s famous “Drunken Fist” battle takes place during this arc.</p>
-			</details>
-		</section>
+		    });
+		});
 
-		<section>
-			<h2>Naruto Shippuden Anime Canon Story Arcs</h2>
-			<figure>
-				<img src="http://www.wtfgamersonly.com/wp-content/uploads/2015/02/naruto-shippuden-naruto-shippuuden.jpg" alt="naruto-shippuden-naruto-shippuuden">
-			</figure>
-			<details>
-				<summary>
-					Episodes 107-135
-				</summary>
-			</details>
-		</section>
+		// The actions for the dropzone of the dragable item
+		user.dropZones.forEach(function(item){
+		    item.addEventListener("dragover", function(e){
+		        e.preventDefault();
+		        // Set the dropEffect to move. I am not sure what it does. I think it changes the cursor
+		        e.dataTransfer.dropEffect = "move";
+						    });
+		    item.addEventListener("drop", function(e){
+		        e.preventDefault();
+		        // Get the id of the target and add the moved element to the target's DOM
+		        var data = e.dataTransfer.getData("text");
+		        this.appendChild(document.getElementById(data));
 
-		<section>
-			<h2>Kazakage Rescue Mission</h2>
-			<details>
-				<summary>
-					Episodes 1-32
-				</summary>
-				<p>The Akatsuki have made their first move and it’s against the Hidden Sand. Gaara has been kidnapped and The remnants of Team 7 are sent after him.</p>
-			</details>
-		</section>
+				// Give the user feedback
+				user.destination.innerHTML = "Drag some more items"
+				user.origin.innerHTML = ""
+				if (user.dropZones[1].children.length == 1) {
+					user.destination.innerHTML = ""
+				}
+				if (user.dropZones[1].children.length == 4) {
+					user.destination.innerHTML = ""
+					user.origin.innerHTML = "Now put them back"
+				}
+				if (user.dropZones[0].children.length == 4) {
+					user.destination.innerHTML = ""
+					user.origin.innerHTML = "Good job"
+				}
+		    });
+		});
 
-		<section>
-			<h2>The Tenchi Bridge Reconnaissance Mission</h2>
-			<details>
-				<summary>
-					Episodes 33-53
-				</summary>
-				<p>Team 7 has been reformed. Captain Yamamoto and Sai join the team as they investigate a lead into Orochimaru. A battle ensues.</p>
-			</details>
-		</section>
-
-		<section>
-			<h2>Akatsuki Suppression Mission</h2>
-			<figure>
-				<img src="http://www.wtfgamersonly.com/wp-content/uploads/2015/02/Sasuke_vs._Itachi_conclusion.png" alt="Sasuke_vs._Itachi_conclusion">
-				<figcaption>
-					Sasuke vs Itachi
-				</figcaption>
-			</figure>
-			<details>
-				<summary>
-					Episodes 72-88
-				</summary>
-				<p>The Hidden Leaf is officially after the Akatsuki. Starting with members Hidan and Kakuzu. This arc heavily focuses on Team 10. Asuma Sarutobi shows his greatness.</p>
-			</details>
-		</section>
-
-
-		<section>
-			<h2>Itachi Pursuit Mission</h2>
-			<details>
-				<summary>
-					Episodes 113-126
-				</summary>
-				<p>Sasuke is out free with his own small team now, Taka. He has assembled his own crew to finally hunt down Itachi and exact his revenge. Naruto and his own team are also after Itachi, but in the hopes of using him to bait Sasuke back to them.</p>
-			</details>
-		</section>
-
-		<section>
-			<h2>Tale of Jiraiya the Gallant</h2>
-			<details>
-				<summary>
-					Episodes 127-133
-				</summary>
-				<p>Jiraiya goes on his own journey to investigate the Akatsuki and learn the secrets of their leader, Pain. The two encounter each other and one of the most impressive battles of the series ensues.</p>
-			</details>
-		</section>
-
-		<section>
-			<h2>Fated Battle Between Brothers</h2>
-			<details>
-				<summary>
-					Episodes 134-143
-				</summary>
-				<p>Sasuke and Itachi finally go head to head. The secrets of Itachi are finally revealed.</p>
-			</details>
-		</section>
-
-		<section>
-			<h2>Pain’s Assault</h2>
-			<details>
-				<summary>
-					Episodes 152-175
-				</summary>
-				<p>After the direct encounter in the Hidden Rain, Pain goes to the Hidden Leaf to destroy the entire village. Naruto undergoes training to learn the Sage Technique.</p>
-			</details>
-		</section>
-
-		<section>
-			<h2>Five Kage Summit</h2>
-			<details>
-				<summary>
-					Episodes 197-214
-				</summary>
-				<p>After Sasuke and his team, now working for the Akatsuki, kidnap the eight tails Jinchuriki the Raikage calls for a Kage Summit to declare the Akatsuki a threat to the Five Great Nations. Sasuke and his team interrupt the Summit and the real threat responsible for the Akastuki reveals himself. The Fourth Great Shinobi War begins.</p>
-			</details>
-		</section>
-
-		<section>
-			<h2>Fourth Shinobi World War: Countdown</h2>
-			<figure>
-				<img src="http://www.wtfgamersonly.com/wp-content/uploads/2015/02/Allied_Shinobi_Forces_Battalion.png" alt="Allied_Shinobi_Forces_Battalion">
-				<figcaption>
-					The Shinobi Allied Forces go to war.
-				</figcaption>
-			</figure>
-			<details>
-				<summary>
-					Episodes 215-222 and 243-256
-				</summary>
-				<p>This entire arc is about the Five Great Nations preparing for the war.</p>
-			</details>
-		</section>
-
-		<section>
-			<h2>Fourth Shinobi World War: Confrontation</h2>
-			<details>
-				<summary>
-					Episodes 261-321
-				</summary>
-				<p>The Fourth Shinobi War begins and the battles are on all fronts. Gaara is put in charge of the Allied Shinobi Forces. The Hidden Mists former Seven Shinobi Swordsmen are brought into the fray. Old allies and foes do battle again whether they are willing or not.</p>
-			</details>
-		</section>
-
-		<section>
-			<h2>Fourth Shinobi World War: Climax</h2>
-			<details>
-				<summary>
-					Episodes 322-375
-				</summary>
-				<p>Madara Uchiha is brought in to the battle as the fighting escalates to unimaginable levels.</p>
-			</details>
-		</section>
-
-		<section>
-			<h2>Birth of the Ten-Tails’ Jinchūriki</h2>
-			<details>
-				<summary>
-					Episodes 378-388 and 391-393, 414-415, 418, 420-421, 424-426, 458-459, 463,469-479
-				</summary>
-				<p>The purpose of the Fourth Shinobi War comes to Light with the premature summon of the Legendary Ten Tailed Beast. The entire Shinobi World looks as though it’s about to end.</p>
-			</details>
-		</section>
-
-		<section>
-			<h2>Kaguya Ōtsutsuki Strikes</h2>
-			<details>
-				<summary>
-					No scheduled release yet.
-				</summary>
-				<p>Series ending, Naruto and Sasuke are granted an incredible power rivaled only by the enemy of all Shinobi.</p>
-			</details>
-
-		</section>
-
-		<footer>
-			<p>Data of: <a href="http://www.wtfgamersonly.com/author/poto/">ERYC JAMES</a> </p>
-			<p>Published on <time datetime="2015-02-24">Feb 24, 2015</time></p>
-			<a href="http://www.wtfgamersonly.com/every-naruto-story-arc-detailed-no-fillers/">Read original article</a>
-		</footer>
-	</article>
+	</script>
 </body>
 </html>
