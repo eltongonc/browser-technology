@@ -27,7 +27,7 @@ Because the fonts are loaded async a default font will be loaded, if `FontFace` 
 This is a features is supported by most browsers. It is not supported by Opera mini.
 
 | IE & Edge             | Firefox, Chrome and Safari| Mobile      |
-|-                     -|-                         -|-           -|
+|-----------------------|---------------------------|-------------|
 |Not supported          |Fully supported            |Not supported|
 
 ### Live demo
