@@ -2,6 +2,13 @@
 
 - [Break the web](https://github.com/eltongonc/browser-technology/Funda)
 
+
 ## Week 2 Feature detection
 
-- [Scroll snapp Propperties](https://github.com/eltongonc/browser-technology/feature_detection/demo1)
+**CSS**
+- [Scroll snapp Propperties](https://github.com/eltongonc/browser-technology/tree/master/feature_detection/scroll-snapp)
+
+**HTML**
+- [HTML5 Detail tag](https://github.com/eltongonc/browser-technology/tree/master/feature_detection/detail-tag)
+
+**JS**
