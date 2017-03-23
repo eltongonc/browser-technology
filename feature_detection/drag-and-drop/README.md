@@ -24,7 +24,7 @@ dropZoneElement.addEventListener("drop", function(e){
 });
 ```
 ### Fallback
-There is currently no default browser fallback. To use the drag and drop feature on a mobile use one of these js-libraries:
+There is currently no default browser fallback. As a fallback the developer could make the elements an ```html <a href="#title>``` and use Javascript to handle the input.  To use the drag and drop feature on a mobile use one of these js-libraries:
 
 - [Hammer.js](http://hammerjs.github.io/)
 - [Interact.js](http://interactjs.io/)

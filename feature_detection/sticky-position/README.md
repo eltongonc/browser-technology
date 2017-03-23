@@ -12,16 +12,13 @@ The CSS `position:sticky` feature is a hybrid of the `position:relative` and `po
 ### Fallback
 CSS skips a rule if the browser doesn't support it and fallback onto the default position, which is `static`
 
-- [Hammer.js](http://hammerjs.github.io/)
-- [Interact.js](http://interactjs.io/)
-
 
 ### Browser that can use it
-This is a features is supported by most browsers. It is not supported on mobile browser because of the way mobile touch events work.
+This is a features is supported by most browsers. It is not supported on all mobile browser by default.
 
 | IE & Edge             | Firefox & Chrome| Safari             | Mobile      |
 |-----------------------|-----------------|--------------------|-------------|
-|Not supported          |Fully supported  |Partial with prefix |Not supported|
+|Not supported          |Fully supported  |Partial with prefix |Partially    |
 
 ### Live demo
 [Link to the example](https://eltongonc.github.io/browser-technology/feature_detection/sticky-position)

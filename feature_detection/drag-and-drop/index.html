@@ -73,8 +73,6 @@
 			destination : document.querySelector('.destination h3')
 		};
 
-
-
 		// allow the elements to be dragable
 		user.dragElements.forEach(function(p){
 		    p.addEventListener("dragstart",function(e){
@@ -92,9 +90,7 @@
 				}else  {
 					user.destination.innerHTML = ""
 				}
-
 		    });
-
 		});
 		// The actions for the dropzone of the dragable item
 		user.dropZones.forEach(function(item){
