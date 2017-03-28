@@ -1,4 +1,4 @@
-# HTML5 Detail tag
+# Drag and drop
 
 The `DragEvent` Javascript feature allows user to drag and drop content from one place to another.
 

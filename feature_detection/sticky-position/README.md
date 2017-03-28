@@ -1,4 +1,4 @@
-# HTML5 Detail tag
+# Sticky Position
 
 The CSS `position:sticky` feature is a hybrid of the `position:relative` and `position:fixed`. When an element hits the user-defined position it will turn into a fixed position.
 

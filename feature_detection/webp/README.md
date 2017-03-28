@@ -1,4 +1,4 @@
-# HTML5 Detail tag
+# WebP
 
 The `picture` HTML element can contain different kind of sources, WebP is one of them. According to [developers.google.com](https://developers.google.com/speed/webp/) WebP lossless images are 26% smaller in size compared to PNGs. WebP lossy images are 25-34% smaller than comparable JPEG images.
 
