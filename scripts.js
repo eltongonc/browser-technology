@@ -32,8 +32,8 @@
 window.addEventListener("keyup", function(event){
     var id = event.key.toUpperCase();
     console.log(event);
-    if (event.code !== "Space" && document.querySelector(`.${id}`)) {
-        var audio = new  Audio(document.querySelector(`.${id}`).id);
+    if (event.code !== "Space" && document.querySelector("."+id)) {
+        var audio = new  Audio(document.querySelector("."+id).id);
         audio.play();
     }
 });
@@ -46,10 +46,26 @@ window.addEventListener("keyup", function(event){
 
 // Fallback
 var inputs = document.querySelectorAll('a');
+console.log(inputs);
 inputs.forEach(function(input){
-    input.addEventListener("click", function(e){
+    // IE fix
+    addEvent(input, "click", function(e){
         e.preventDefault();
         var audio = new  Audio(input.id);
         audio.play();
     });
+    // input.addEventListener("click", function(e){
+    // });
 });
+
+// src: http://stackoverflow.com/questions/6927637/addeventlistener-in-internet-explorer
+function addEvent(element, event, callback) {
+   if (element.addEventListener)  // W3C DOM
+      element.addEventListener(event,callback,false);
+   else if (element.attachEvent) { // IE DOM
+      element.attachEvent("on"+event, callback);
+   }
+   else { // No much to do
+      element[event] = callback;
+   }
+}

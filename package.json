@@ -1,0 +1,48 @@
+{
+    "name": "browser-technology",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "php -S localhost:3000",
+        "live": "ngrok http 3000",
+        "uglify:js": "uglifyjs ./public/js/*.js --compress --mangle --name-cache  --support-ie8    -o ./public/js/script.min.js",
+        "uglify:css": "uglifycss ./public/css/style.css > ./public/css/style.min.css"
+    },
+    "keywords": [],
+    "author": "Elton Gonçalves Gomes",
+    "license": "MIT",
+    "bugs": "https://github.com/eltongonc/browser-technology/issues",
+    "homepage": "https://github.com/eltongonc/browser-technology#readme",
+    "dependencies": {
+        "async": "^2.1.5",
+        "body-parser": "^1.13.3",
+        "compression": "^1.6.2",
+        "cookie-parser": "^1.3.3",
+        "dotenv": "^4.0.0",
+        "express": "^4.13.3",
+        "express-handlebars": "^3.0.0",
+        "morgan": "^1.6.1",
+        "nodemon": "^1.11.0",
+        "request": "^2.81.0",
+        "serve-favicon": "^2.3.0"
+    },
+    "devDependencies": {
+        "chai": "^3.5.0",
+        "debug": "^2.2.0",
+        "gulp": "^3.9.0",
+        "gulp-livereload": "^3.8.0",
+        "gulp-nodemon": "^2.0.2",
+        "gulp-plumber": "^1.0.0",
+        "gulp-sass": "^3.0.0",
+        "mocha": "^3.0.2",
+        "ngrok": "^2.2.6",
+        "nyc": "^10.0.0",
+        "supertest": "^2.0.0",
+        "uglify-js": "^2.8.15"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/eltongonc/browser-technology.git"
+    }
+}
