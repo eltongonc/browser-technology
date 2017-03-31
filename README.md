@@ -15,7 +15,26 @@ $ npm start && npm run live
 this should give you live ngrok server for testing purpose
 
 ## Fallback process
-1. JS enhancement. JavaScript allows users to use the keyboard and mouse to interact.
+1. JS enhancement. JavaScript allows users to use the keyboard and mouse to interact. And adds classes to the html file
+```js
+window.addEventListener("keydown", function(event){
+    var id = event.key.toUpperCase();
+    if (event.code !== "Space" && document.getElementById(id)) {
+        var src = document.getElementById(id);
+        var newAudio = new Audio( src.children[1].src);
+        newAudio.play();
+        src.parentNode.classList.add("active");
+    }
+});
+window.addEventListener("keyup", function(event){
+    var id = event.key.toUpperCase();
+    if (event.code !== "Space" && document.getElementById(id)) {
+        var src = document.getElementById(id);
+        src.parentNode.classList.remove("active");
+    }
+});
+```
+2. Audio feature. This is the ideal fallback. The user can play the audio file
 ```html
 <audio preload="auto" id="Q"  controls>
     <!-- If the browser supports .wav -->
@@ -24,29 +43,11 @@ this should give you live ngrok server for testing purpose
     <source src="/sounds/Claps/Claps09.mp3" type="audio/mp3">
 </audio>
 ```
-2. JS enhancement. JavaScript allows users to use the keyboard and mouse to interact. And adds classes to the html file
-```html
-<audio preload="auto" id="Q"  controls>
-    <!-- If the browser supports .wav -->
-    <source src="/sounds/Claps/Claps09.wav" type="audio/wav">
-    <!-- If the browser supports .mp3 -->
-    <source src="/sounds/Claps/Claps09.mp3" type="audio/mp3">
-</audio>
-```
-3. Audio feature. This is the ideal fallback. The user can play the audio file
-```html
-<audio preload="auto" id="Q"  controls>
-    <!-- If the browser supports .wav -->
-    <source src="/sounds/Claps/Claps09.wav" type="audio/wav">
-    <!-- If the browser supports .mp3 -->
-    <source src="/sounds/Claps/Claps09.mp3" type="audio/mp3">
-</audio>
-```
-4. IE enhancement. This is a internet explorer only feature and will show an player. Clicking on the play button allows the user to listen in the browser
+3. IE enhancement. This is a internet explorer only feature and will show an player. Clicking on the play button allows the user to listen in the browser
 ```html
 <embed controls="true" autostart="false" src="/sounds/Claps/Claps09.wav" />
 ```
-5. No support. The user can download and listen to the file offline if the browser doesn't support audio.
+4. No support. The user can download and listen to the file offline if the browser doesn't support audio.
 ```html
 <a href="/sounds/Claps/Claps09.wav">Download</a>
 ```
