@@ -55,10 +55,8 @@ As seen on the image above, only four browsers fully support drag and drop. Some
 Getting drag-and-drop to fully work on a site requires a lot of fallbacks. The developer should add drag-and-drop as an extra, not as a main feature.
 
 ### Live demo
-I made an example that will show the snapping in action on the browsers that support. If the browser doesn't support it the sections will be expanded.
+I made an example that will show the drag-and-drop in action on the browsers that support. If the browser doesn't support it the sections will be expanded.
 
-
-View the difference on Firefox and Chrome
 [Link to the example](https://eltongonc.github.io/browser-technology/feature_detection/drag-and-drop)
 
 ***
