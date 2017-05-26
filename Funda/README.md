@@ -1,83 +1,100 @@
-# Browser technology
-
-The web is for everybody. This means that anyone with an internet connection can access and edit the web. The web is ubiquitous, the web is messy says Aaron Gustafson. Eventhough being free to access by anyone the web is for everyone, not everyone can experience it in the same way. Some misinterpretations that people have are:
-- Everyone has a Mouse or Touchpad.
-- Every connection are equally great.
-- Computers become faster every time.
-- All screens are equally big.
-- All humans are the same.
+# Fork your Funda app
+As an assignment for the course Browser technologies for the minor Everything Web, I forked and analyzed a project that I made in one week and made list enhancements that could make the site better.
 
 
-## Progressive enhancement
-This week was all about progressive enhancement. Breaking the web was one of the assignment where we chose two of the browser features and disabled it.
-Your site might not work if one or more of these features are not present or even outdated :
-- Disabled Images.
-- Disabled Custom Fonts.
-- Disabled Javascript.
-- Lack of Colors(colorblindness).
-- Slow broadband connection.
-- No access to the localStorage
-- No permission for Cookies (disabling cookies).
-- No mouse or trackpad.
+Here is an image of the app when you enter the homescreen
+![Funda app](screenshots/funda_home.png)
 
-What i wanted to figure out was **What would happen if you disabled images and cookies permission for three days**.
+## Features
+Here is a list of test that I did in order to check the enhancements.  
 
-### First site: Protest sportswear
-After receiving the assignment I went to [Awwwards.com](www.awwwards.com) to browser award wining sites. I soon came across [Protest sportswear](https://www.protest.eu/nl/) which is nominated for site of the year in December 2016. Well lets see some difference:
+### Disabling the images
+I disabled the images to check is the site useable.
 
-**Images enabled**
-![Protest sportswear](https://eltongonc.github.io/browser-technology/screenshots/protest_imgs.png)
+![Funda app](screenshots/funda_no_img.png)
 
-**Images disabled**
-![Protest sportswear](https://eltongonc.github.io/browser-technology/screenshots/protest_no-img.png)
+As you can see: While being disabled, it is still clear what the user can do. The images are profided with a `alt` atribute to make sure a description is shown when the image isn't.
 
-**Nothing will be rendered!**
-
-The site waits on sections to be done loading to load another section. I assume it waits until one image is done loading to load another. The home page is a very important page. By having this display as an empty screen you will scare away your viewers.
-
-**Solution: Consider an alternative homepage or remove the fancy onloadsucces images**
-
-### Second site: Github
-While typing this file I wanted to make a repository to store it in at [Github](github.com), well guess what this file will never be available because
-
-![Github requires cookies](https://eltongonc.github.io/browser-technology/screenshots/github_no-cookies.png)
-
-Gitub uses the cookie to check an user session or store the session of an user. Again this is an assumption.
-
-**Solution: I am not sure if cookies are needed for every login, but give the user the choice wether he/she want to use cookies for a session**
-
-### Third site: Moodle
-The journey continues.
-Well apparently disabling cookies and images is a great combination. My school site does not let me in without cookies and appears as if it was a regular bootstrap site.
-This site lacks a logo or no title to indicate what the site is and who it is for.
-
-![CMD Moodle](https://eltongonc.github.io/browser-technology/screenshots/moodle.png)
-
-
-**Solution: Set a logo or an alt attribute to your logo so people can tell if it's your site. And also same as the second site, give the user a option to save the session**
-
-
-### My own Funda prototype
-Let's put my week old Fundaa prototype to a test.
-![Github requires cookies](https://eltongonc.github.io/browser-technology/screenshots/funda.png)
-
-#### Pro's
-- Every image has an alt tag, so if you can't see the image at least you read what it is.
-- Because of the Funda styleguide there are no issues for colorblindness.
-- The screenreader does not have trouble going through the content. The only issue that occurs: my screenreader is english, but the content is in dutch.
-
-#### Con's
-- You can't navigate through the app without localStorage.
-- No feedback to the user why the app broke.
-- API response time is to low on slower connection.
-- The map features is very absent if you do not give permission to use the users location.
-
-#### TO-DO
+#### To-do
 - Give the user more information on the alt text [styling broken images](https://bitsofco.de/styling-broken-images/)
-- Loading speed can be faster
-- Reduce the requests done.
-- Apply a lazyload feature that shows a few images at a time.
-- Fallback for the map.
-- Better focus states.
-- HTML page fallback.
-- Progressive enhancement in redirection and interactivity [Progressive enhancement](https://www.christianheilmann.com/2015/02/18/progressive-enhancement-is-not-about-javascript-availability/#)
+
+### Colorblindness test
+In order to get a great result I searched for the most common form of colorblindness.
+
+*There is general agreement that worldwide 8% of men and 0.5% of women have a colour vision deficiency.
+
+The 8% of colour blind men can be divided approximately into 1% deuteranopes, 1% protanopes, 1% protanomalous and 5% deuteranomalous. Approximately half of colour blind people will have a mild anomalous deficiency, the other 50% have moderate or severe anomalous conditions.
+
+Numbers of tritanopes/tritanomalous people and achromats is very small, perhaps 1 in 30-50,000 people.*
+- [Types of colorblindness](http://www.colourblindawareness.org/colour-blindness/types-of-colour-blindness/)
+
+I used the google plugin [Chromelens](https://chrome.google.com/webstore/detail/chromelens/idikgljglpfilbhaboonnpnnincjhjkd?utm_source=chrome-ntp-icon) to get the same results as a person who is colorblind.
+
+**Normal**
+![Normal](screenshots/funda_color0.png)
+
+**Deuteranomalous - Green weak(5%)**
+![Deuteranomalous(5%)](screenshots/funda_color1.png)
+
+**Protanopes - Red blind(1%)**
+![Protanopes(1%)](screenshots/funda_color2.png)
+
+**Deuteranopes - Green blind(1%)**
+![Deuteranopes(1%)](screenshots/funda_color3.png)
+
+Based on the images above I can conclude that there are no issues regarding colors.
+
+### Screenreader
+The screenreader does not have trouble going through the content. The only issue that occurs: my screenreader is english, but the content is in dutch.
+
+
+### Storage
+In order to disable the localStorage I used google's `Incognito mode`. This disables all cookies, storage and other type of data storage.
+I noticed that my app worked perfectly.
+
+#### To-do
+- Build a server that does stores the search result into a database.
+
+### Disabling the mouse
+I disable my mouse to see if Physicaly impaired people could use the app. The <kbd>Tab</kbd> key was my friend here. While using the tab to navigate through my app I noticed that I was completely lost.
+
+#### To-do
+- A better styling for the `:focus` state.
+
+### Disabling Javascript
+![No Javascript](screenshots/funda_no_js.png)
+By disabling Javascript I could do any API request, wich makes the app pretty much useless. The map features is very absent without Javascript.
+The only way to fix this is by building a server.
+
+#### To-do
+- Build a server that does the API request.
+
+### Device testing
+This is what my app looks like on other devices
+
+**Dell Vostro laptop**
+![Funda app](screenshots/funda_home.png)
+
+**HTC One**
+![Funda app](screenshots/funda_htc.jpg)
+
+**Samsung galaxy tab s2**
+![Funda app](screenshots/funda_samsung.jpg)
+
+**Opera mini browser**
+![Funda app](screenshots/funda_opera.jpg)
+
+The site does not the same on other devices as seen on the images above.
+
+#### To-do
+- Apply Feature detection.
+- Apply the mobile first principle while styling the pages.
+
+### Conclusion
+In order for this app to be perfect. I need to do the following enhancements:
+- Give the user more information on the alt text [styling broken images](https://bitsofco.de/styling-broken-images/).
+- Build a server that does stores the search result into a database.
+- A better styling for the `:focus` state.
+- Build a server that does the API request.
+- Apply Feature detection.
+- Apply the mobile first principle while styling the pages.
